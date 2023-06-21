@@ -403,13 +403,13 @@ header .navbar ul li a:hover {
 
 .resumebtn .btn span {
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
 }
 
 .resumebtn .btn i {
     margin-left: 0.3rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: 0.3s;
 }
 
@@ -453,6 +453,7 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
     background-color: #000;
+    ;
 }
 
 .skills .content {
@@ -465,17 +466,51 @@ header .navbar ul li a:hover {
     color: #fff;
 }
 
+.card-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(30px);
+}
+
+.card {
+    width: 180px;
+    height: 180px;
+    background-color: #8b7676;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.card-img {
+    width: 80%;
+    height: 80%;
+    margin: 1.5rem 0rem;
+}
+
+/* skills section ends */
+
 /* scroll top starts */
 #scroll-top {
     position: fixed;
     top: -150%;
     right: 2rem;
-    padding: 1rem 1.5rem;
-    font-size: 2.5rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
     background: rgb(191, 33, 33);
-    box-shadow: 0 3px 10px rgb(191, 33, 33);
+    box-shadow: 0 2px 10px rgb(191, 33, 33);
     color: #fff;
-    border-radius: 0%;
+    border-radius: 0;
     transition: 0.5s linear;
     z-index: 1000;
 }
