@@ -494,9 +494,17 @@ header .navbar ul li a:hover {
 }
 
 .card-img {
-    width: 50%;
-    height: auto;
-    margin: 1rem;
+    width: auto;
+    height: 50%;
+    margin: 1rem 1rem;
+}
+
+.card-text {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
 }
 
 /* skills section ends */
