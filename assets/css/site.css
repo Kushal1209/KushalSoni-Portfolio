@@ -475,27 +475,28 @@ header .navbar ul li a:hover {
     background-color: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
-    border-radius: 15px;
+    border-radius: 0;
     padding: 25px;
     backdrop-filter: blur(30px);
 }
 
 .card {
-    width: 180px;
-    height: 180px;
-    background-color: #8b7676;
+    width: 140px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    ;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 10px;
-    padding: 10px;
+    margin: 15px 5px;
+    padding: 15px 5px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 0;
     opacity: 1;
 }
 
 .card-img {
-    width: 80%;
-    height: 80%;
-    margin: 1.5rem 0rem;
+    width: 50%;
+    height: auto;
+    margin: 1rem;
 }
 
 /* skills section ends */

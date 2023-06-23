@@ -76,8 +76,8 @@ document.addEventListener("visibilitychange", function () {
 var typed = new Typed(".typing-text", {
   strings: ["Full-Stack Developer", "Mobile App Developer", "Software Tester"],
   loop: true,
-  typeSpeed: 50,
-  backSpeed: 30,
+  typeSpeed: 20,
+  backSpeed: 20,
   backDelay: 500,
 });
 // <!-- typed js effect ends -->
