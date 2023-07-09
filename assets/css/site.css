@@ -387,6 +387,10 @@ header .navbar ul li a:hover {
     color: rgb(191, 33, 33);
 }
 
+.moretext {
+    display: none;
+}
+
 .resumebtn {
     margin-top: 3rem;
 }
@@ -429,7 +433,7 @@ header .navbar ul li a:hover {
 
     .about .row .image img {
         margin: 0 auto;
-        width: 80%;
+        width: 60%;
         mix-blend-mode: normal;
     }
 
@@ -453,7 +457,6 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
     background-color: #000;
-    ;
 }
 
 .skills .content {
@@ -477,7 +480,7 @@ header .navbar ul li a:hover {
     width: 100%;
     border-radius: 0;
     padding: 25px;
-    backdrop-filter: blur(30px);
+    /* backdrop-filter: blur(30px); */
 }
 
 .card {
@@ -516,6 +519,23 @@ header .navbar ul li a:hover {
     font-size: 1.5rem;
     font-weight: 600;
     margin-top: 1rem;
+}
+
+/* skills section ends */
+
+/* skills section starts */
+.services {
+    background-color: #000;
+}
+
+.services .content {
+    flex: 1 1 40rem;
+    padding-top: 7rem;
+    z-index: 1;
+}
+
+.services .content .heading {
+    color: #fff;
 }
 
 /* skills section ends */
