@@ -62,22 +62,37 @@ $(document).ready(function () {
   // <!-- emailjs to mail contact form data -->
 });
 
-// document.addEventListener("visibilitychange", function () {
-//   if (document.visibilityState === "visible") {
-//     document.title = "Portfolio | Kushal Soni";
-//     $("#favicon").attr("href", "assets/images/favicon.png");
-//   } else {
-//     document.title = "Come Back To Portfolio";
-//     $("#favicon").attr("href", "assets/images/favhand.png");
-//   }
-// });
-
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-  strings: ["Full-Stack Developer", "Mobile App Developer", "Software Tester"],
+  strings: [
+    "Frontend Developer",
+    "Backend Developer",
+    "Web Designer",
+    "Mobile App Developer",
+    "Software Tester",
+  ],
   loop: true,
   typeSpeed: 20,
   backSpeed: 20,
   backDelay: 500,
 });
 // <!-- typed js effect ends -->
+
+// disable developer mode
+document.onkeydown = function (e) {
+  if (e.keyCode == 123) {
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+    return false;
+  }
+  if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+    return false;
+  }
+};

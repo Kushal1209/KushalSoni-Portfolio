@@ -233,23 +233,6 @@ header .navbar ul li a:hover {
     z-index: 1;
 }
 
-.home .image {
-    flex: 1 1 40rem;
-    z-index: 1;
-}
-
-.home .image img {
-    width: 70%;
-    margin-left: 6rem;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.home .image img:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
 .home .content h2 {
     font-size: 5rem;
     font-weight: 800;
@@ -280,13 +263,11 @@ header .navbar ul li a:hover {
     margin-top: 1rem;
     position: absolute;
     line-height: 0;
-    padding: 1.6rem 3rem;
     border-radius: 0em;
     transition: 0.5s;
     color: #fff;
     background: transparent;
     border: 0.2rem solid rgb(191, 33, 33);
-    padding: 2rem 2rem;
     font-family: "Nunito", sans-serif;
 }
 
@@ -296,21 +277,16 @@ header .navbar ul li a:hover {
     letter-spacing: 0.1rem;
 }
 
-.home .btn i {
+.home .btn {
     margin-left: 0.3rem;
     font-size: 1.5rem;
     transition: 0.3s;
+    padding: 2.5rem 2.5rem;
 }
 
 .home .btn:hover {
-    color: #000;
     background: rgb(191, 33, 33);
 }
-
-.home .btn:hover i {
-    transform: translateX(5px);
-}
-
 
 /* about section starts */
 .about {
@@ -403,6 +379,7 @@ header .navbar ul li a:hover {
     background: rgb(191, 33, 33);
     box-shadow: 0px 1px 10px rgb(191, 33, 33);
     font-family: "Nunito", sans-serif;
+    cursor: pointer;
 }
 
 .resumebtn .btn span {
@@ -536,6 +513,57 @@ header .navbar ul li a:hover {
 
 .services .content .heading {
     color: #fff;
+}
+
+.services-card-container {
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    width: 100%;
+    border-radius: 0;
+    justify-content: center;
+}
+
+.services-card {
+    width: 400px;
+    height: 65%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 15px 9.5px;
+    padding: 15px 25px;
+    text-align: start;
+    border-radius: 3%;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.services-card:hover {
+    background-color: rgb(191, 33, 33);
+    transform: scale(1.1);
+}
+
+.services-card {
+    transition: transform 0.5s;
+}
+
+.services-card-img {
+    width: 60px;
+    height: 20%;
+    margin: 1rem 1rem;
+}
+
+h1 .services-card-text {
+    display: flex;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.services-card-text {
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 /* skills section ends */
