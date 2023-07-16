@@ -10,7 +10,7 @@
 }
 
 /* ---- stats.js ---- */
-/* .count-particles {
+.count-particles {
     background: #000022;
     position: absolute;
     top: 48px;
@@ -44,4 +44,4 @@
 
 .count-particles {
     border-radius: 0 0 3px 3px;
-} */
+}
