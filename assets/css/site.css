@@ -471,7 +471,6 @@ header .navbar ul li a:hover {
     text-align: center;
     border-radius: 0;
     opacity: 1;
-    cursor: pointer;
 }
 
 .card-img {
