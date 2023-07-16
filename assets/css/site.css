@@ -566,7 +566,7 @@ h1 .services-card-text {
 /* scroll top starts */
 #scroll-top {
     position: fixed;
-    top: -130%;
+    top: -120%;
     right: 2rem;
     padding: 1rem 2rem;
     font-size: 2rem;
@@ -579,7 +579,7 @@ h1 .services-card-text {
 }
 
 #scroll-top.active {
-    top: calc(100% - 12rem);
+    top: calc(100% - 7rem);
 }
 
 /* scroll top ends */
