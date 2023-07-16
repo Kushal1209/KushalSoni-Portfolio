@@ -21,7 +21,6 @@ html {
 body {
     background: #f7f7f7;
     font-family: "Poppins", sans-serif;
-    margin: 0%;
 }
 
 *::selection {
@@ -99,7 +98,7 @@ section {
 }
 
 header .logo {
-    font-size: 3rem;
+    font-size: 2.3rem;
     font-weight: 800;
     font-family: "Tourney", cursive;
     text-decoration: none;
@@ -171,7 +170,7 @@ header .navbar ul li a:hover {
     header .navbar ul li {
         text-align: center;
         width: 100%;
-        margin: 2.5rem 0;
+        margin: 1rem 0;
         border-radius: 0rem;
         width: 26rem;
     }
@@ -263,7 +262,7 @@ header .navbar ul li a:hover {
     margin-top: 1rem;
     position: absolute;
     line-height: 0;
-    border-radius: 0em;
+    border-radius: 0rem;
     transition: 0.5s;
     color: #fff;
     background: transparent;
