@@ -290,9 +290,6 @@ header .navbar ul li a:hover {
 /* about section starts */
 .about {
     background-color: #fff;
-}
-
-.about .content {
     flex: 1 1 40rem;
     padding-top: 7rem;
     z-index: 1;
@@ -569,7 +566,7 @@ h1 .services-card-text {
 /* scroll top starts */
 #scroll-top {
     position: fixed;
-    top: -120%;
+    top: -130%;
     right: 2rem;
     padding: 1rem 2rem;
     font-size: 2rem;
@@ -582,7 +579,7 @@ h1 .services-card-text {
 }
 
 #scroll-top.active {
-    top: calc(100% - 7rem);
+    top: calc(100% - 12rem);
 }
 
 /* scroll top ends */
