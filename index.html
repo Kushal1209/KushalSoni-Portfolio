@@ -231,9 +231,10 @@
                 </div>
             </div>
             <div class="content-right">
-                <form>
+                <form method="post" id="contact-form">
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
                     <textarea name="message" rows="6" placeholder="Message" required></textarea>
                     <button type="submit" class="submit-btn" name="submit">Send</button>
                 </form>
@@ -262,6 +263,10 @@
     <script src="./assets/js/site.js"></script>
 
     <script src="./assets/node_modules/aos/dist/aos.js"></script>
+
+    <script src="./assets/node_modules/validate.js/validate.min.js"></script>
+
+    <script src="./assets/js/email.js"></script>
 
     <script>
         AOS.init();
