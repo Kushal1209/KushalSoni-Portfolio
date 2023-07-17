@@ -635,6 +635,10 @@ form textarea {
     border-radius: 0;
 }
 
+form input:hover,
+form textarea:hover {
+    border: 2px solid rgb(191, 33, 33);
+}
 
 .submit-btn {
     background: transparent;
