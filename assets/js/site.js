@@ -45,10 +45,7 @@ $(document).ready(function () {
 var typed = new Typed(".typing-text", {
   strings: [
     "Frontend Developer",
-    "Backend Developer",
-    "Web Designer",
-    "Mobile App Developer",
-    "Software Tester",
+    "Backend Developer"
   ],
   loop: true,
   typeSpeed: 20,
