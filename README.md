@@ -1,6 +1,6 @@
 # Portfolio Website - Kushal Soni
 
-![Portfolio Preview](index.html)
+![Portfolio Preview](https://kushal1209.github.io/KushalSoni-Portfolio/)
 
 A modern, responsive portfolio website showcasing my work as a Full Stack Developer. Built with HTML5, CSS3, and JavaScript, featuring smooth animations and an intuitive user interface.
 
