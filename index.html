@@ -7,80 +7,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Kushal's Portfolio website to showcase his abilities and skills to the community.">
+    <meta name="keywords" content="Kushal Soni, Web Developer, Full Stack Developer, Angular Developer, .NET Developer, Portfolio">
+    <meta name="author" content="Kushal Soni">
+    <meta property="og:title" content="Kushal Soni - Full Stack Developer">
+    <meta property="og:description" content="Portfolio website showcasing my work as a Full Stack Developer">
+    <meta property="og:image" content="./assets/images/kushal.jpg">
+    <meta property="og:url" content="https://kushalsoni.vercel.app/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="./assets/node_modules/aos/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/particles.css" />
     <link rel="stylesheet" href="./assets/css/site.css" />
     <title>Portfolio | Kushal Soni</title>
+    <!-- <link rel="icon" type="image/x-icon" href="path/to/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="path/to/apple-touch-icon.png"> -->
 </head>
 
 <body>
+    <!-- Creative Preloader -->
+    <div class="preloader">
+        <div class="loader-content">
+            <div class="loading-text">
+                LOADING<span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition"></div>
+    
     <header>
-        <a href="#home" class="logo"> Kushal</a>
-        <div id="menu" class="fas fa-bars"></div>
+        <a href="#home" class="logo">Kushalsoni</a>
+    
         <nav class="navbar">
             <ul>
-                <li><a class="active" id="active" href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+    
+        <div id="menu" class="fas fa-bars"></div>
     </header>
 
     <section class="home" id="home">
-        <div id="particles-js"></div>
+        <div class="home-container">
+            <div class="home-content">
+                <div class="text-zone">
+                    <h1>
+                        <span class="greeting">Hi there,</span>
+                        <br>
+                        I'm <span class="name">Kushal Soni</span>
+                        <br>
+                        <span class="profession">
+                            <span class="typing-text"></span>
+                        </span>
+                    </h1>
+                    <p class="description">
+                        Passionate about crafting innovative digital solutions with cutting-edge technologies. 
+                        Specialized in full-stack development and creating seamless user experiences.
+                    </p>
+                    <div class="home-buttons">
+                        <a href="#work" class="btn explore-btn">
+                            <span>View My Work</span>
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="#contact" class="btn connect-btn">
+                            <span>Let's Connect</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="tech-stack">
+                    <div class="tech-title">Tech Stack |</div>
+                    <div class="tech-icons">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-angular" title="Angular"></i>
+                        <i class="fab fa-react" title="React"></i>
+                        <i class="fab fa-microsoft" title=".NET"></i>
+                    </div>
+                </div>
 
-        <div class="content">
-            <h2>
-                Hello, I'm <span>Kushal Soni</span>
-            </h2>
-            <p>I'm a <span class="typing-text"></span></p>
-            <a href="#about" class="btn"><span>About Me</span>
-            </a>
+            </div>
+    
+            <div class="home-bg">
+                <div class="overlay"></div>
+                <div class="shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+    
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrows">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="about" id="about">
         <h2 class="heading">About <span>Me</span></h2>
-        <div class="row">
-            <div class="image">
-                <img draggable="false" class="tilt" src="./assets/images/kushal.jpg" alt="Kushal Soni">
+        
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-border">
+                    <img src="./assets/images/kushal.jpg" alt="Profile Picture" loading="lazy">
+                </div>
             </div>
-            <div class="content">
-                <p>Hi, my name is Kushal Soni, and I hail from the vibrant city of Vadodara.
-                    Throughout my academic journey, I have been fortunate to receive a
-                    quality education that has shaped me into the person I am today.</br></br>
-                    My schooling took place at Urmi School. After completing my schooling, I pursued my passion for
-                    computer
-                    science by enrolling in the Bachelor of Computer
-                    Applications (BCA) program at Navrachana University. During my time there, I delved deep into
-                    the world of
-                    computer
-                    programming, software development, and information technology. The rigorous curriculum and
-                    hands-on projects
-                    allowed me
-                    to hone my technical skills and cultivate a problem-solving mindset.</br></br>
-                    Currently, I am pursuing my Master's in Computer Applications (MCA) from Charusat University.
-                    This program
-                    has further
-                    expanded my knowledge and expertise in areas such as web development, database management,
-                    software
-                    engineering, software's quality assurance, data analysis, etc.</br></br>
-                    I am a well-qualified Full Stack Developer familiar
-                    with wide range of programming utilities and languages.
-                    Knowledgeable of backend and frontend development requirements.
-                    Handles any part of process with ease. Collaborative team player with
-                    excellent technical abilities offering close to 1.5 years of related
-                    experience.
-                </p>
-                <div class="resumebtn">
-                    <a href="./assets/resume/Kushal_Soni_Resume.pdf" download="Kushal_Soni_Resume">
-                        <button class="btn"><span>Download CV </span><i class="fas fa-download"></i></button>
+    
+            <div class="about-content">
+                <div class="about-bio">
+                    <h3>Full Stack Developer</h3>
+                    <p class="tag">Based in Vadodara, Gujarat, India</p>
+                    
+
+                    <p class="description">
+                        I am a passionate Full Stack Developer with expertise in building modern web applications. 
+                        With a strong foundation in both frontend and backend technologies, I create seamless digital experiences 
+                        that solve real-world problems.
+                    </p>
+                </div>
+    
+                <div class="about-info">
+                    <div class="info-item">
+                        <span class="info-title">Experience</span>
+                        <span class="info-value">1+ Years</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title">Projects</span>
+                        <span class="info-value">2+ Completed</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-title">Technologies</span>
+                        <span class="info-value">4+ Mastered</span>
+                    </div>
+                </div>
+    
+                <div class="about-buttons">
+                    <a href="assets/resume/Kushal Soni Resume.pdf" class="btn resume-btn" download>
+                        <span>Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="#contact" class="btn contact-btn" data-section="contact">
+                        <span>Contact Me</span>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -89,165 +172,450 @@
 
     <section class="services" id="services">
         <h2 class="heading">My <span>Services</span></h2>
-        <div class="content ">
-            <div class="services-card-container">
-                <div class="services-card">
-                    <img src="./assets/images/web-design.svg" class="services-card-img" alt="Web Design"
-                        tooltip="Web Design">
-                    <h1><span class="services-card-text">Web Design</span></h1>
-                    <span class="services-card-text">It is a long established fact that a reader will be distracted by
-                        the
-                        readable
-                        content of a page when looking at its
-                        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                        letters,
-                        as opposed to using.</span>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
                 </div>
-                <div class="services-card">
-                    <img src="./assets/images/web-development.svg" class="services-card-img" alt="web-development"
-                        tooltip="web-development">
-                    <h1><span class="services-card-text">Web Development</span></h1>
-                    <span class="services-card-text">It is a long established fact that a reader will be distracted by
-                        the
-                        readable
-                        content of a page when looking at its
-                        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                        letters,
-                        as opposed to using.
-                    </span>
+                <h3>Web Development</h3>
+                <p>Full-stack development using modern technologies like Angular and .NET Core. Building scalable, secure, and high-performance web applications tailored to your needs.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Custom Web Applications</li>
+                    <li><i class="fas fa-check"></i> RESTful APIs</li>
+                    <li><i class="fas fa-check"></i> Performance Optimization</li>
+                </ul>
+            </div>
+    
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
                 </div>
-                <div class="services-card">
-                    <img src="./assets/images/database.svg" class="services-card-img" alt="DB" tooltip="DB">
-                    <h1><span class="services-card-text">Database Administration</span></h1>
-                    <span class="services-card-text">It is a long established fact that a reader will be distracted by
-                        the
-                        readable
-                        content of a page when looking at its
-                        layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                        letters,
-                        as opposed to using.</span>
+                <h3>UI/UX Design</h3>
+                <p>Creating intuitive and visually appealing interfaces that provide exceptional user experiences. Focus on modern design principles and responsive layouts.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Responsive Design</li>
+                    <li><i class="fas fa-check"></i> User Interface Design</li>
+                    <li><i class="fas fa-check"></i> Interactive Prototypes</li>
+                </ul>
+            </div>
+    
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-database"></i>
                 </div>
+                <h3>Database Design</h3>
+                <p>Expert database solutions including design, implementation, and optimization. Ensuring efficient data organization and secure handling of your information.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Database Architecture</li>
+                    <li><i class="fas fa-check"></i> Performance Tuning</li>
+                    <li><i class="fas fa-check"></i> Data Security</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section class="skills" id="skills">
-        <div class="content ">
-            <h2 class="heading">Skills</h2>
-            <div class="card-container">
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/html.png" class="card-img" alt="Html5" tooltip="HTML5">
-                    <span class="card-text">Html5</span>
-                </div>
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <h3>Frontend Development</h3>
+                <div class="skills-content">
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90" style="max-width:90%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="85" style="max-width:85%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="80" style="max-width:80%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fab fa-angular"></i>
+                            <span>Angular</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="85" style="max-width:85%"></div>
+                        </div>
+                    </div>
 
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/css.png" class="card-img" alt="CSS" tooltip="CSS">
-                    <span class="card-text">CSS</span>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="85" style="max-width:85%"></div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+    
+            <div class="skills-box">
+                <h3>Backend Development</h3>
+                <div class="skills-content">
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fab fa-microsoft"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90" style="max-width:90%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fas fa-code"></i>
+                            <span>.NET Core</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="85" style="max-width:85%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="50" style="max-width:50%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="85" style="max-width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="skills-box">
+                <h3>Tools & Technologies</h3>
+                <div class="skills-content">
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fab fa-github-alt"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90" style="max-width:90%"></div>
+                        </div>
+                    </div>
 
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/js.png" class="card-img" alt="JavaScript" tooltip="JavaScript">
-                    <span class="card-text">JavaScript</span>
-                </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fas fa-terminal"></i>
+                            <span>Visual Studio</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90" style="max-width:90%"></div>
+                        </div>
+                    </div>
+    
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fas fa-terminal"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90" style="max-width:90%"></div>
+                        </div>
+                    </div>
 
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/angular.png" class="card-img" alt="React" tooltip="React">
-                    <span class="card-text">Angular</span>
-                </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fas fa-database"></i>
+                            <span>SSMS</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90" style="max-width:90%"></div>
+                        </div>
+                    </div>
 
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/cSharp.png" class="card-img" alt="C#" tooltip="C#">
-                    <span class="card-text">C#</span>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fas fa-microsoft"></i>
+                            <span>Microsoft Azure</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="40" style="max-width:40%"></div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/java.png" class="card-img" alt="Java" tooltip="Java">
-                    <span class="card-text">Java</span>
+    <section class="work" id="work">
+        <h2 class="heading">My <span>Work</span></h2>
+        
+        <div class="work-container">
+            <!-- Project Card 1 -->
+            <div class="work-card" data-tilt data-tilt-max="10">
+                <div class="card-content">
+                    <div class="card-front">
+                        <img src="./assets/images/project1.jpg" alt="Project 1" loading="lazy">
+                        <div class="project-type">Full Stack Development</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A modern e-commerce solution built with Angular and .NET Core, featuring real-time inventory management and AI-powered recommendations.</p>
+                        <div class="tech-used">
+                            <span>Angular</span>
+                            <span>.NET Core</span>
+                            <span>SQL Server</span>
+                            <span>Azure</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="#" class="project-link" aria-label="Source Code">
+                                <i class="fab fa-github"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/xamarin.png" class="card-img" alt="Xamarin" tooltip="Xamarin">
-                    <span class="card-text">Xamarin</span>
+            </div>
+    
+            <!-- Project Card 2 -->
+            <div class="work-card" data-tilt data-tilt-max="10">
+                <div class="card-content">
+                    <div class="card-front">
+                        <img src="./assets/images/project2.jpg" alt="Project 2" loading="lazy">
+                        <div class="project-type">Web Application</div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Task Management System</h3>
+                        <p>A collaborative task management platform with real-time updates, drag-and-drop functionality, and advanced filtering capabilities.</p>
+                        <div class="tech-used">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="#" class="project-link" aria-label="Source Code">
+                                <i class="fab fa-github"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/NET_Core.png" class="card-img" alt=".NET Core" tooltip=".NET Core">
-                    <span class="card-text">.NET Core</span>
-                </div>
-
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/visualStudio.png" class="card-img" alt="Visual Studio"
-                        tooltip="Visual Studio">
-                    <span class="card-text">Visual Studio</span>
-                </div>
-
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/sql.png" class="card-img" alt="SQL" tooltip="SQL">
-                    <span class="card-text">SQL</span>
-                </div>
-
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/selenium.png" class="card-img" alt="Selenium" tooltip="Selenium">
-                    <span class="card-text">Selenium</span>
-                </div>
-
-                <div class="card" data-aos="flip-left">
-                    <img src="./assets/images/github.png" class="card-img" alt="Github" tooltip="Github">
-                    <span class="card-text">Github</span>
-                </div>
+            </div>
+    
+            <!-- Add more project cards as needed -->
+        </div>
+    
+        <!-- Interactive Background Elements -->
+        <div class="work-bg">
+            <div class="code-rain"></div>
+            <div class="floating-elements">
+                <span>&lt;/&gt;</span>
+                <span>{}</span>
+                <span>[]</span>
+                <span>()</span>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>me</span></h2>
-        <div class="row">
-            <div class="content-left">
-                <p><i class="fas fa-paper-plane"></i> sonikushal532@gmail.com</p>
-                <p><i class="fas fa-phone-square"></i> +91 992-526-9618</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/kushal.soni.5268"
-                        aria-label="More about Kushal Soni on Facebook."><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram,.com" aria-label="More about Kushal Soni on Instagram."><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/kushalsoni1209/"
-                        aria-label="More about Kushal Soni on Linkedin."><i class="fab fa-linkedin"></i></a>
+        <h2 class="heading">Contact <span>Me</span></h2>
+        
+        <div class="contact-container">
+            <!-- Contact Info Side -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <div class="card-content">
+                        <h3>Email</h3>
+                        <p>sonikushal532@gmail.com</p>
+                    </div>
+                </div>
+    
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <div class="card-content">
+                        <h3>Phone</h3>
+                        <p>+91 9925269618</p>
+                    </div>
+                </div>
+    
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="card-content">
+                        <h3>Location</h3>
+                        <p>Vadodara, Gujarat, India</p>
+                    </div>
+                </div>
+    
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
-            <div class="content-right">
-                <form method="post" id="contact-form">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="message" rows="6" placeholder="Message" required></textarea>
-                    <button type="submit" class="submit-btn" name="submit">Send</button>
+    
+            <!-- Contact Form Side -->
+            <div class="contact-form">
+                <form action="#" method="POST" id="contact-form">
+                    <div class="input-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        <span class="input-highlight"></span>
+                    </div>
+    
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        <span class="input-highlight"></span>
+                    </div>
+    
+                    <div class="input-group">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <span class="input-highlight"></span>
+                    </div>
+    
+                    <div class="input-group">
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        <span class="input-highlight"></span>
+                    </div>
+    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
             </div>
         </div>
-
     </section>
 
-    <a href="#home" aria-label="ScrollTop" class="fas fa-arrow-up" id="scroll-top"></a>
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+    
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-logo">Kushalsoni</h3>
+                <p class="footer-desc">Passionate Full Stack Developer crafting innovative digital solutions with cutting-edge technologies.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:sonikushal532@gmail.com">sonikushal532@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+
+                        <a href="tel:+919925269618">+91 9925269618</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+
+                        <span>Vadodara, Gujarat, India</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2024 Kushalsoni. All rights reserved.</p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">
+                    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Kushal Soni
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top Button -->
+    <div id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="./assets/node_modules/jquery/dist/jquery.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
         integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="./assets/node_modules/particles.js/particles.js"></script>
-    <script src="./assets/js/particles.js"></script>
-
-    <script src="./assets/node_modules/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
-
     <script src="https://unpkg.com/scrollreveal"></script>
-
     <script src="./assets/js/site.js"></script>
-
-    <script src="./assets/node_modules/aos/dist/aos.js"></script>
-
     <script src="./assets/node_modules/validate.js/validate.min.js"></script>
-
     <script>
         AOS.init();
     </script>
