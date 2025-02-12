@@ -44,22 +44,37 @@ document.querySelectorAll('section').forEach(section => {
 
 // Page Transitions for Navigation
 document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = this.getAttribute('href');
-      
-      // Trigger transition
-      const transition = document.querySelector('.page-transition');
-      transition.classList.add('active');
-      
-      setTimeout(() => {
-          window.location.href = target;
-      }, 600);
-      
-      setTimeout(() => {
-          transition.classList.remove('active');
-      }, 1200);
-  });
+    link.addEventListener('click', function(e) {
+        // Only handle internal links
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const target = this.getAttribute('href');
+            
+            // Scroll to the section smoothly without page transition
+            document.querySelector(target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        } else {
+            // For external links or different pages
+            e.preventDefault();
+            const target = this.getAttribute('href');
+            
+            // Trigger transition
+            const transition = document.querySelector('.page-transition');
+            transition.classList.add('active');
+            
+            // Navigate after transition completes
+            setTimeout(() => {
+                window.location.href = target;
+            }, 600);
+        }
+    });
+});
+
+// Remove transition class when page loads
+window.addEventListener('load', () => {
+    const transition = document.querySelector('.page-transition');
+    transition.classList.remove('active');
 });
 
 // Update image tags to use data-src for lazy loading
@@ -386,11 +401,13 @@ const inputs = document.querySelectorAll('.input-group input, .input-group texta
 inputs.forEach(input => {
   input.addEventListener('focus', function() {
       this.parentElement.querySelector('.input-highlight').style.width = '100%';
+      this.parentElement.querySelector('.input-highlight-textarea').style.width = '100%';
   });
 
   input.addEventListener('blur', function() {
       if (!this.value) {
           this.parentElement.querySelector('.input-highlight').style.width = '0';
+          this.parentElement.querySelector('.input-highlight-textarea').style.width = '0';
       }
   });
 });
@@ -483,17 +500,53 @@ document.addEventListener('DOMContentLoaded', () => {
   initTilt();
 });
 
-// Add this to your existing JavaScript
-document.addEventListener('DOMContentLoaded', () => {
-    // Prevent direct access to 404.html
-    if (window.location.pathname === '/404.html') {
-        window.location.href = 'index.html';
-    }
-});
+// Prevent direct access to 404.html
+if (window.location.pathname === '/404.html') {
+    window.location.href = '/';
+}
 
 // Handle 404 errors for dynamic content
 window.addEventListener('error', (e) => {
     if (e.target.tagName === 'IMG' || e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK') {
         console.error('Resource not found:', e.target.src || e.target.href);
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize scroll animations
+    const scrollElements = document.querySelectorAll('.scroll-animation');
+    
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= 
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100))
+        );
+    };
+    
+    const displayScrollElement = (element) => {
+        element.classList.add('scrolled');
+    };
+    
+    const hideScrollElement = (element) => {
+        element.classList.remove('scrolled');
+    };
+    
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 100)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    }
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+    
+    // Initial check for elements in view
+    handleScrollAnimation();
 });

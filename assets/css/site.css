@@ -1353,6 +1353,10 @@ header.sticky {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
 }
 
 .card-content {
@@ -1381,6 +1385,7 @@ header.sticky {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    transform: translateZ(30px);
 }
 
 .work-card:hover .card-front img {
@@ -1398,6 +1403,7 @@ header.sticky {
     font-size: 1.4rem;
     font-weight: 500;
     backdrop-filter: blur(5px);
+    transform: translateZ(40px);
 }
 
 /* Card Back */
@@ -1419,12 +1425,14 @@ header.sticky {
     font-size: 2.4rem;
     color: #fff;
     margin-bottom: 1rem;
+    transform: translateZ(30px);
 }
 
 .card-back p {
     font-size: 1.6rem;
     color: #bbb;
     line-height: 1.6;
+    transform: translateZ(30px);
 }
 
 /* Tech Stack Tags */
@@ -1443,6 +1451,7 @@ header.sticky {
     color: #fff;
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
+    transform: translateZ(30px);
 }
 
 .tech-used span:hover {
@@ -1532,6 +1541,7 @@ header.sticky {
 
     .work-card {
         height: 350px;
+        transform: none !important;
     }
 
     .card-back {
@@ -1544,6 +1554,10 @@ header.sticky {
 
     .card-back p {
         font-size: 1.4rem;
+    }
+
+    .js-tilt-glare {
+        display: none;
     }
 }
 
@@ -1699,8 +1713,18 @@ header.sticky {
     transition: all 0.3s ease;
 }
 
+.input-highlight-textarea{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(191, 33, 33);
+    transition: all 0.3s ease;
+}
+
 .input-group input:focus ~ .input-highlight,
-.input-group textarea:focus ~ .input-highlight {
+.input-group textarea:focus ~ .input-highlight-textarea {
     width: 100%;
 }
 
@@ -2112,5 +2136,59 @@ header.sticky {
 
     #scroll-top.active {
         bottom: 2rem;
+    }
+}
+
+/* 3D Card Effects */
+.js-tilt-glare {
+    border-radius: inherit;
+}
+
+/* Base animation styles */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.17, 0.85, 0.438, 0.99);
+}
+
+.scroll-animation.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay variations */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* Animation variations */
+.fade-up {
+    transform: translateY(50px);
+}
+
+.fade-down {
+    transform: translateY(-50px);
+}
+
+.fade-left {
+    transform: translateX(-50px);
+}
+
+.fade-right {
+    transform: translateX(50px);
+}
+
+.fade-in {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-animation {
+        transition: none;
+        opacity: 1;
+        transform: none;
     }
 }
