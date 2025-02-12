@@ -83,7 +83,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Kushal Soni - [sonikushal532@gmail.com](mailto:sonikushal532@gmail.com)
 
-- LinkedIn: [Kushal Soni](https://www.linkedin.com/in/kushal1209)
+- LinkedIn: [Kushal Soni](https://www.linkedin.com/in/kushalsoni1209)
 - GitHub: [Kushal1209](https://github.com/Kushal1209/KushalSoni-Portfolio)
 - Instagram: [kushalsoni_12](https://www.instagram.com/kushalsoni_12/)
 
